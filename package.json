@@ -1,5 +1,9 @@
 {
   "name": "texsvg-server",
   "author": "Mark <mark@remarkablemark.org>",
+  "dependencies": {
+    "express": "latest",
+    "texsvg": "latest"
+  },
   "license": "MIT"
 }
