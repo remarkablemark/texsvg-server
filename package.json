@@ -1,6 +1,9 @@
 {
   "name": "texsvg-server",
   "author": "Mark <mark@remarkablemark.org>",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "express": "latest",
     "texsvg": "latest"
