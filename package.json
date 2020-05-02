@@ -1,5 +1,6 @@
 {
   "name": "texsvg-server",
+  "version": "0.0.0",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
   "scripts": {
