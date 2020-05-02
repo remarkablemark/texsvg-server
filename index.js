@@ -17,6 +17,10 @@ app.get('/', async (req, res, next) => {
   }
 });
 
+app.get('/heartbeat', (req, res, next) => {
+  res.send('OK');
+});
+
 const port = process.env.port || 3000;
 const hostname = process.env.HOST;
 app.listen(port, hostname, () =>
