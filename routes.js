@@ -4,6 +4,8 @@ const svgs = require('./svgs');
 
 const router = Router();
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 const contentType = 'Content-Type';
 const imageSvgXml = 'image/svg+xml';
 
@@ -53,6 +55,9 @@ router.use((req, res, next) => {
  * Error
  */
 router.use((err, req, res, next) => {
+  if (isDevelopment) {
+    return next(err);
+  }
   res.status(500).send('500');
 });
 
