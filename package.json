@@ -2,8 +2,8 @@
   "name": "texsvg-server",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
