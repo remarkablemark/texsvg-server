@@ -2,11 +2,15 @@
   "name": "texsvg-server",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
-    "express": "latest",
-    "texsvg": "latest"
+    "express": "^4.17.1",
+    "texsvg": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   },
   "license": "MIT"
 }
