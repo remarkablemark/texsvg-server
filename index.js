@@ -25,6 +25,10 @@ app.use((req, res, next) => {
   res.status(404).send('404');
 });
 
+app.use((err, req, res, next) => {
+  res.status(500).send('500');
+});
+
 const port = process.env.port || 3000;
 const hostname = process.env.HOST;
 app.listen(port, hostname, () =>
