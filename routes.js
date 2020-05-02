@@ -1,10 +1,9 @@
 const { Router } = require('express');
 const texsvg = require('texsvg');
+const { isDevelopment } = require('./constants');
 const svgs = require('./svgs');
 
 const router = Router();
-
-const isDevelopment = process.env.NODE_ENV === 'development';
 
 const contentType = 'Content-Type';
 const imageSvgXml = 'image/svg+xml';
