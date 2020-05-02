@@ -6,6 +6,7 @@
     "dev": "NODE_ENV=development nodemon index.js"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "texsvg": "^1.1.0"
   },
