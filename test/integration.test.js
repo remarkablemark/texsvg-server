@@ -6,6 +6,7 @@ const svgs = require('../helpers/svgs');
 imageSvgXml += '; charset=utf-8';
 textHtml = 'text/html; charset=utf-8';
 const status200 = 200;
+const status404 = 404;
 const status500 = 500;
 
 const agent = supertest.agent(app);
@@ -16,6 +17,15 @@ describe('GET /heartbeat', () => {
       .get('/heartbeat')
       .expect(contentType, textHtml)
       .expect(status200, 'OK');
+  });
+});
+
+describe('GET /404', () => {
+  it('returns with 404', async () => {
+    await agent
+      .get('/404')
+      .expect(contentType, textHtml)
+      .expect(status404, status404.toString());
   });
 });
 
