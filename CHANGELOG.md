@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/remarkablemark/texsvg-server/compare/v1.0.0...v1.0.1) (2020-05-03)
+
+
+### Bug Fixes
+
+* **routes:** do not decode URI since querystring is already decoded ([e4d231d](https://github.com/remarkablemark/texsvg-server/commit/e4d231dd530f67125a300eeacbc3a65f5e898b4f))
+
 ## 1.0.0 (2020-05-03)
 
 
