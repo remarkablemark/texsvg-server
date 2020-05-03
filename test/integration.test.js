@@ -4,13 +4,18 @@ let { contentType, imageSvgXml, emptySvg } = require('../helpers/constants');
 const svgs = require('../helpers/svgs');
 
 imageSvgXml += '; charset=utf-8';
+textHtml = 'text/html; charset=utf-8';
 const status200 = 200;
+const status500 = 500;
 
 const agent = supertest.agent(app);
 
 describe('GET /heartbeat', () => {
   it('returns with 200 OK', async () => {
-    await agent.get('/heartbeat').expect(status200, 'OK');
+    await agent
+      .get('/heartbeat')
+      .expect(contentType, textHtml)
+      .expect(status200, 'OK');
   });
 });
 
@@ -72,5 +77,30 @@ describe(`GET /?tex=${tex2}`, () => {
 
   it('has SVG memoized', () => {
     expect(svgs[quadraticFormula]).toBe(svg);
+  });
+});
+
+const percent = '%';
+const tex3 = encodeURIComponent(percent);
+describe(`GET /?tex=${tex3}`, () => {
+  let svg;
+
+  it('does not have SVG memoized', () => {
+    expect(svgs[percent]).toBe(undefined);
+  });
+
+  it('returns with SVG', async () => {
+    await agent
+      .get(`/?tex=${tex3}`)
+      .expect(contentType, imageSvgXml)
+      .expect(status200)
+      .expect(res => {
+        svg = res.body.toString();
+        expect(svg).toMatchSnapshot();
+      });
+  });
+
+  it('has SVG memoized', () => {
+    expect(svgs[percent]).toBe(svg);
   });
 });
