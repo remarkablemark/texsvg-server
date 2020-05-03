@@ -1,7 +1,7 @@
 const compression = require('compression');
 const express = require('express');
 const morgan = require('morgan');
-const { isDevelopment } = require('./constants');
+const { isDevelopment } = require('./helpers/constants');
 const routes = require('./routes');
 
 const app = express();

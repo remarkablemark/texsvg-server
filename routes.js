@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const texsvg = require('texsvg');
-const { isDevelopment } = require('./constants');
-const { sendSvg } = require('./helpers');
-const svgs = require('./svgs');
+const { isDevelopment } = require('./helpers/constants');
+const { sendSvg } = require('./helpers/express');
+const svgs = require('./helpers/svgs');
 
 const router = Router();
 
