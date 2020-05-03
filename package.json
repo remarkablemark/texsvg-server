@@ -6,7 +6,9 @@
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "dev": "NODE_ENV=development nodemon",
-    "release": "standard-version --no-verify"
+    "release": "standard-version --no-verify",
+    "test": "NODE_ENV=test jest --coverage",
+    "test:watch": "npm test -- --watch"
   },
   "dependencies": {
     "compression": "^1.7.4",
