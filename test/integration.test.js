@@ -14,13 +14,25 @@ describe('GET /heartbeat', () => {
 });
 
 describe('GET /', () => {
-  it('returns with empty svg', async () => {
+  it('returns with empty SVG', async () => {
     await agent
       .get('/')
       .expect(contentType, imageSvgXml)
       .expect(status200)
       .expect(res => {
         expect(res.body.toString()).toBe(emptySvg);
+      });
+  });
+});
+
+describe('GET /?tex=x', () => {
+  it('returns with SVG', async () => {
+    await agent
+      .get('/?tex=x')
+      .expect(contentType, imageSvgXml)
+      .expect(status200)
+      .expect(res => {
+        expect(res.body.toString()).toMatchSnapshot();
       });
   });
 });
