@@ -1,5 +1,4 @@
-const contentType = 'Content-Type';
-const imageSvgXml = 'image/svg+xml';
+const { contentType, imageSvgXml } = require('./constants');
 
 /**
  * Sends SVG as response.
