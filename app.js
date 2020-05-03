@@ -7,6 +7,7 @@ const routes = require('./routes');
 const app = express();
 
 app.disable('x-powered-by');
+/* istanbul ignore if */
 if (process.env.NODE_ENV !== 'test') {
   app.use(morgan(isDevelopment ? 'dev' : 'combined'));
 }
