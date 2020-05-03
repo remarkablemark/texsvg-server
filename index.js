@@ -12,8 +12,4 @@ app.use(compression());
 app.use(routes);
 
 const port = process.env.port || 3000;
-const hostname = process.env.HOST;
-
-app.listen(port, hostname, () =>
-  console.log(`Server running at http://${hostname || 'localhost'}:${port}/`),
-);
+app.listen(port);
