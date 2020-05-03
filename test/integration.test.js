@@ -1,9 +1,11 @@
 const supertest = require('supertest');
 const app = require('../app');
 let { contentType, imageSvgXml, emptySvg } = require('../helpers/constants');
+const svgs = require('../helpers/svgs');
 
 imageSvgXml += '; charset=utf-8';
 const status200 = 200;
+let tex;
 
 const agent = supertest.agent(app);
 
@@ -25,14 +27,26 @@ describe('GET /', () => {
   });
 });
 
-describe('GET /?tex=x', () => {
+tex = 'x';
+describe(`GET /?tex=${tex}`, () => {
+  let svg;
+
+  it('does not have SVG memoized', () => {
+    expect(svgs[tex]).toBe(undefined);
+  });
+
   it('returns with SVG', async () => {
     await agent
-      .get('/?tex=x')
+      .get(`/?tex=${tex}`)
       .expect(contentType, imageSvgXml)
       .expect(status200)
       .expect(res => {
-        expect(res.body.toString()).toMatchSnapshot();
+        svg = res.body.toString();
+        expect(svg).toMatchSnapshot();
       });
+  });
+
+  it('has SVG memoized', () => {
+    expect(svgs[tex]).toBe(svg);
   });
 });
