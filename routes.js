@@ -17,8 +17,7 @@ const imageSvgXml = 'image/svg+xml';
 router.get('/', async (req, res, next) => {
   try {
     // decode tex
-    let { tex } = req.query;
-    tex = decodeURIComponent(tex);
+    const tex = decodeURIComponent(req.query.tex || '');
 
     // return svg (if memoized)
     if (svgs.hasOwnProperty(tex)) {
