@@ -58,6 +58,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The server will restart if you make edits.
 
+### `npm test`
+
+Runs integration tests.
+
+### `npm run test:watch`
+
+Runs integration tests in watch mode.
+
 ### `npm run release`
 
 Generates a release.
