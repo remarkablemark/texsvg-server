@@ -11,5 +11,4 @@ app.use(morgan(isDevelopment ? 'dev' : 'combined'));
 app.use(compression());
 app.use(routes);
 
-const port = process.env.PORT || 3000;
-app.listen(port);
+module.exports = app;

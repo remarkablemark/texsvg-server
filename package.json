@@ -2,7 +2,7 @@
   "name": "texsvg-server",
   "version": "1.0.0",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "app.js",
+  "main": "bin/www",
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "dev": "NODE_ENV=development nodemon",
