@@ -1,5 +1,7 @@
+const { emptySvg } = require('./constants');
+
 const svgs = {
-  '': '<svg xmlns="http://www.w3.org/2000/svg"/>',
+  '': emptySvg,
 };
 
 module.exports = svgs;
