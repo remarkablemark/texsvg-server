@@ -44,6 +44,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The server will restart if you make edits.
 
+### `npm run release`
+
+Generates a release.
+
 ## License
 
 [MIT](LICENSE)
