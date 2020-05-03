@@ -1,12 +1,10 @@
 const { Router } = require('express');
 const texsvg = require('texsvg');
 const { isDevelopment } = require('./constants');
+const { sendSvg } = require('./helpers');
 const svgs = require('./svgs');
 
 const router = Router();
-
-const contentType = 'Content-Type';
-const imageSvgXml = 'image/svg+xml';
 
 /**
  * GET /
@@ -19,17 +17,13 @@ router.get('/', async (req, res, next) => {
     // decode tex
     const tex = decodeURIComponent(req.query.tex || '');
 
-    // return svg (if memoized)
-    if (svgs.hasOwnProperty(tex)) {
-      res.setHeader(contentType, imageSvgXml);
-      return res.send(svgs[tex]);
+    // generate svg (if not memoized)
+    if (!svgs.hasOwnProperty(tex)) {
+      svgs[tex] = await texsvg(tex);
     }
 
-    // generate, memoize, and return svg
-    const svg = await texsvg(tex);
-    svgs[tex] = svg;
-    res.setHeader(contentType, imageSvgXml);
-    res.send(svg);
+    // return svg
+    sendSvg(res, svgs[tex]);
   } catch (err) {
     next(err);
   }
