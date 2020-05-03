@@ -1,6 +1,8 @@
 # texsvg-server
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Build Status](https://travis-ci.org/remarkablemark/texsvg-server.svg?branch=master)](https://travis-ci.org/remarkablemark/texsvg-server)
+[![Coverage Status](https://coveralls.io/repos/github/remarkablemark/texsvg-server/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/texsvg-server?branch=master)
 
 Web API that converts [TeX](https://en.wikipedia.org/wiki/TeX) to [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics).
 
