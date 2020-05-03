@@ -15,7 +15,7 @@ const router = Router();
 router.get('/', async (req, res, next) => {
   try {
     // decode tex
-    const tex = decodeURIComponent(req.query.tex || '');
+    const tex = req.query.tex || '';
 
     // generate svg (if not memoized)
     if (!svgs.hasOwnProperty(tex)) {
