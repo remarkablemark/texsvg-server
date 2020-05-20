@@ -24,6 +24,10 @@ Quadratic Formula:
 
 See https://texsvg.herokuapp.com/?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 
+> To ensure the SVG renders correctly, [URI encode](https://meyerweb.com/eric/tools/dencoder/) the TeX.
+
+[JSFiddle](https://jsfiddle.net/remarkablemark/1k7t6s9o/)
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
