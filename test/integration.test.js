@@ -4,10 +4,9 @@ let { contentType, imageSvgXml, emptySvg } = require('../helpers/constants');
 const svgs = require('../helpers/svgs');
 
 imageSvgXml += '; charset=utf-8';
-textHtml = 'text/html; charset=utf-8';
+const textHtml = 'text/html; charset=utf-8';
 const status200 = 200;
 const status404 = 404;
-const status500 = 500;
 
 const agent = supertest.agent(app);
 
