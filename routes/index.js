@@ -47,6 +47,7 @@ router.use((req, res, next) => {
  * Error
  */
 router.use((err, req, res, next) => {
+  /* istanbul ignore next */
   if (isDevelopment) {
     return next(err);
   }
