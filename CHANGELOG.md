@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/remarkablemark/texsvg-server/compare/v1.0.2...v1.1.0) (2020-07-10)
+
+
+### Features
+
+* **helpers:** add constants for res header cache control 1 year ([83e35ad](https://github.com/remarkablemark/texsvg-server/commit/83e35ad645a1887cf0d73290e1b8e870ef626764))
+* **helpers:** set response header for Cache-Control to 1 year ([4ed50dd](https://github.com/remarkablemark/texsvg-server/commit/4ed50dd42bbb66106d4561608144cff91134e40f))
+
 ### [1.0.2](https://github.com/remarkablemark/texsvg-server/compare/v1.0.1...v1.0.2) (2020-06-12)
 
 ### [1.0.1](https://github.com/remarkablemark/texsvg-server/compare/v1.0.0...v1.0.1) (2020-05-03)
