@@ -1,6 +1,12 @@
 const supertest = require('supertest');
 const app = require('../app');
-let { contentType, imageSvgXml, emptySvg } = require('../helpers/constants');
+let {
+  contentType,
+  imageSvgXml,
+  cacheControl,
+  cacheOneYear,
+  emptySvg,
+} = require('../helpers/constants');
 const svgs = require('../helpers/svgs');
 
 imageSvgXml += '; charset=utf-8';
@@ -33,6 +39,7 @@ describe('GET /', () => {
     await agent
       .get('/')
       .expect(contentType, imageSvgXml)
+      .expect(cacheControl, cacheOneYear)
       .expect(status200)
       .expect(res => {
         expect(res.body.toString()).toBe(emptySvg);
@@ -52,6 +59,7 @@ describe(`GET /?tex=${tex1}`, () => {
     await agent
       .get(`/?tex=${tex1}`)
       .expect(contentType, imageSvgXml)
+      .expect(cacheControl, cacheOneYear)
       .expect(status200)
       .expect(res => {
         svg = res.body.toString();
@@ -77,6 +85,7 @@ describe(`GET /?tex=${tex2}`, () => {
     await agent
       .get(`/?tex=${tex2}`)
       .expect(contentType, imageSvgXml)
+      .expect(cacheControl, cacheOneYear)
       .expect(status200)
       .expect(res => {
         svg = res.body.toString();
@@ -102,6 +111,7 @@ describe(`GET /?tex=${tex3}`, () => {
     await agent
       .get(`/?tex=${tex3}`)
       .expect(contentType, imageSvgXml)
+      .expect(cacheControl, cacheOneYear)
       .expect(status200)
       .expect(res => {
         svg = res.body.toString();
