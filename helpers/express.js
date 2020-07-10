@@ -1,4 +1,9 @@
-const { contentType, imageSvgXml } = require('./constants');
+const {
+  contentType,
+  imageSvgXml,
+  cacheControl,
+  cacheOneYear,
+} = require('./constants');
 
 /**
  * Sends SVG as response.
@@ -7,7 +12,8 @@ const { contentType, imageSvgXml } = require('./constants');
  * @param {String} svg
  */
 const sendSvg = (res, svg) => {
-  res.setHeader(contentType, imageSvgXml);
+  res.set(contentType, imageSvgXml);
+  res.set(cacheControl, cacheOneYear);
   res.send(svg);
 };
 
