@@ -35,17 +35,16 @@ See https://texsvg.herokuapp.com/?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 
 ## Installation
 
-Clone repository:
+Clone the repository:
 
 ```sh
-$ git clone https://github.com/remarkablemark/texsvg-server.git
-$ cd texsvg-server
+git clone https://github.com/remarkablemark/texsvg-server.git && cd texsvg-server
 ```
 
-Install dependencies:
+Install the dependencies:
 
 ```sh
-$ npm install
+npm install
 ```
 
 ## Scripts
