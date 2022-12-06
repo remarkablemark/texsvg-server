@@ -1,8 +1,10 @@
 # texsvg-server
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Run on Replit](https://replit.com/badge/github/remarkablemark/texsvg-server)](https://replit.com/github/remarkablemark/texsvg-server)
+
 [![Build Status](https://travis-ci.org/remarkablemark/texsvg-server.svg?branch=master)](https://travis-ci.org/remarkablemark/texsvg-server)
 [![Coverage Status](https://coveralls.io/repos/github/remarkablemark/texsvg-server/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/texsvg-server?branch=master)
+![GitHub last commit](https://img.shields.io/github/last-commit/remarkablemark/texsvg-server)
 
 Web API that converts [TeX](https://en.wikipedia.org/wiki/TeX) to [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics).
 
@@ -20,13 +22,13 @@ Quadratic Formula:
 /?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 ```
 
-![x equals begin fraction negative b plus or minus begin square root b squared minus 4 times a times c end square root over 2 times a end fraction](https://texsvg.herokuapp.com/?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} 'Quadratic Formula')
+![x equals begin fraction negative b plus or minus begin square root b squared minus 4 times a times c end square root over 2 times a end fraction](https://texsvg-server-github.remarkablemark.repl.co/?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} 'Quadratic Formula')
 
-See https://texsvg.herokuapp.com/?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+See https://texsvg-server-github.remarkablemark.repl.co/?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 
 > To ensure the SVG renders correctly, [URI encode](https://meyerweb.com/eric/tools/dencoder/) the TeX.
 
-[JSFiddle](https://jsfiddle.net/remarkablemark/1k7t6s9o/)
+[Replit](https://replit.com/@remarkablemark/texsvg-server-GitHub) | [JSFiddle](https://jsfiddle.net/remarkablemark/1k7t6s9o/)
 
 ## Prerequisites
 
@@ -38,7 +40,8 @@ See https://texsvg.herokuapp.com/?tex=x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 Clone the repository:
 
 ```sh
-git clone https://github.com/remarkablemark/texsvg-server.git && cd texsvg-server
+git clone https://github.com/remarkablemark/texsvg-server.git
+cd texsvg-server
 ```
 
 Install the dependencies:
